@@ -1,0 +1,45 @@
+/*
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it
+is easier to update the theme. Simply copy an existing style
+from style.css to this file, and modify it to your liking. */
+
+
+/* GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+.wp-count-down table td {
+    padding: 20px;
+}
+#footer {
+    border-top: 0px !important;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #222222;
+    font-family: 'Open sans' !important;
+    font-weight: 700!important;
+}
+.entry p, #main p, body, p {
+    font-family: 'Open sans' !important;
+}
+.two-col-left #main-sidebar-container #main, .two-col-right #main-sidebar-container #main {
+    width: 100%;
+}
+
+/* DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+@media only screen and (min-width: 768px) {
+	/* Desktop styles go below this line */
+
+
+	
+}
