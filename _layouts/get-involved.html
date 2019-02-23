@@ -1,0 +1,46 @@
+--- 
+layout: default 
+--- 
+
+{% include hero.html %}
+
+<section class="section">
+  <div class="container content ub-content ub-top-content">
+    <h1 class="title has-text-centered">{{page.title}}</h1>
+    <div class="columns">
+      <div class="column"></div>
+      <div class="column is-two-thirds">{{content}}</div>
+      <div class="column"></div>
+    </div>
+    <ul class="ub-proj-list">
+    {% for project in site.projects %}
+      <li>
+      {% if project.align == "left" %}
+        <div class="columns">
+          <div class="column is-one-third">
+            <figure class="ub-proj-figure"><img src="{{site.baseurl}}/assets/img/{{project.img}}" alt="{{project.alt}}"></figure>
+          </div>
+          <div class="column is-two-thirds">
+            <h4 class="title">{{project.title}}</h4>
+            {{project.content}}
+          </div>
+        </div>
+      {% else %}
+        <div class="columns">
+          <div class="column is-two-thirds">
+            <h4 class="title">{{project.title}}</h4>
+            {{project.content}}
+          </div>
+          <div class="column is-one-third">
+            <figure class="ub-proj-figure"><img src="{{site.baseurl}}/assets/img/{{project.img}}" alt="{{project.alt}}"></figure>
+          </div>
+        </div>
+      {% endif %}
+      </li>
+    {% endfor %}    
+    </ul>
+
+  </div>
+</section>
+
+

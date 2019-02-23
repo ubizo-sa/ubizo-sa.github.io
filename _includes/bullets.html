@@ -1,0 +1,26 @@
+{% comment %} First get the number of columns we need {% endcomment %}
+{% assign columns = '' | split: '' %}
+{% for item in page.bullets %}
+  {% if columns contains item.column %}
+  {% else %}
+    {% assign columns = columns | push: item.column %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Now actually output {% endcomment %}
+<div class="columns">
+{% for column in columns %}
+  <div class="column">
+    <ul style="list-style: none">
+
+    {% assign subset = page.bullets | where:"column",column %}
+    {% for item in subset %}
+      <li>
+        <span class="icon"><i class="fa {{item.icon}}"></i></span> {{item.text}}
+      </li>
+    {% endfor %}
+
+    </ul>
+  </div>
+{% endfor %}
+</div>

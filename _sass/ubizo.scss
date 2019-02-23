@@ -1,0 +1,302 @@
+@charset "utf-8";
+@import "bulma/utilities/initial-variables";
+
+
+
+
+// 2. Set your own initial variables
+$orange: #f49c05;
+// $black: #242424;
+$navbar-item-hover-background-color: transparent;
+
+$project-spacing: 3em;
+// $family-serif: "Merriweather", "Georgia", serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+// $primary: $orange;
+// $dark: $grey-darker !default
+// $darkest: $grey-darkest;
+
+// $primary: $pink;
+// $primary-invert: $pink-invert;
+// Use the existing orange as the danger color
+// $danger: $orange;
+// Use the new serif family
+// $family-primary: $family-serif;
+
+// 3.5 Import the variables method
+// @import "bulma/utilities/variables";
+
+// 3.6 Add our new color
+// $colors: append($colors, ("darkest": ($darkest, $dark-invert)));
+
+// 4. Import the rest of Bulma
+@import "bulma";
+
+.navbar {
+  font-family: 'Istok Web', sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 400;
+  @include desktop {
+  text-transform: uppercase;}
+
+  .button.ub-pill {
+      font-size: 13px;        
+  }
+
+  &.is-transparent {
+      background-color: transparent;
+  }
+
+  .ubi-burger {
+      &:hover {
+          background-color: transparent;
+      }
+      span {
+          background-color: #fff;
+      }
+  }
+}
+
+// .ub-navbar-link::after {
+//   border-color: #fff;
+// }
+
+.ubi-menu.is-active {
+  background-color: rgba(0,0,0,.8);
+  right: 1.625rem;
+  position: absolute;
+  z-index: 100;
+}
+
+//--------
+// Add suppport for transparency and "is-darkest"
+//--------
+.is-darkest {
+  background-color: $black-ter;
+  color: $dark-invert;
+}
+
+.hero {
+  .navbar-item,
+  a.navbar-item,
+  a.navbar-link {
+    color: inherit;
+  }
+
+  &.is-darkest {
+    .navbar-item:hover,
+    a.navbar-item:hover,
+    a.navbar-link:hover {
+      color: $white;
+    }
+
+    .navbar.is-transparent .navbar-dropdown {
+      background-color: $black-ter;
+    
+      a.navbar-item:hover {
+          background-color: $black-bis;
+          color: white;
+      }
+    }
+  }
+}
+
+.ub-home-hero {
+  background-color: transparent;
+  background-image: url('img/crew-770.jpg');
+  background-position: center center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+  @include tablet {
+      background-image: url('img/crew-1000.jpg');        
+  }
+  @include desktop {
+      background-image: url('img/crew-1500.jpg');        
+  }
+  @include fullhd {
+      background-image: url('img/crew-2500.jpg');        
+  }
+}
+
+
+.ub-top-content {
+  padding-top: 3em;
+}
+.ub-main-content {
+    margin-left: 2em;
+    margin-right: 2em;
+    figure {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+.ub-content {
+  max-width: 1020px;
+
+  p,
+  .title {
+      font-family: 'Lora', serif;
+  }
+
+  p {
+      line-height: 1.6em;
+      color: rgba(26,26,26,.7);
+      font-weight: 400;
+  }
+}
+.ub-home-title {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: inherit;
+}
+
+.content {
+    .ub-proj-list {
+        list-style: none;
+        li {
+            margin-top: 3em;
+            padding-bottom: 3em;
+            &:not(:last-child) {
+                border-bottom: 1px $grey-lighter solid;
+            }
+        }
+    }
+
+    .ub-proj-figure {
+        margin:0;
+    }
+}
+
+.button.ub-pill {
+  border-radius: 300px;
+  transition: background-color .2s 0s ease-in-out,color .2s 0s ease-in-out;
+
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  font-family: 'Istok Web', sans-serif;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  padding: 1em 1.5em !important;
+  &:hover {
+      background-color: #fff;
+      color: #181818;
+  }
+}
+
+.navbar-item.has-dropdown {
+  .navbar-dropdown {
+      text-align: left;
+      padding: 1em 0;
+      display: inline-block;
+      position: absolute;
+      top: 100%;
+      left: -.5em;
+      z-index: 1000;
+      font-size: 13px;
+      box-sizing: border-box;
+      white-space: nowrap;
+      transform: scale(1, 0);
+      transform-origin: 0 0;
+      transition:transform .14s 0s ease-in-out;
+
+      &>div {
+          opacity: 0;
+          padding: 0;
+          transition: opacity .05s 0s ease-in-out;
+
+          & a {
+              display: block;
+              padding: .5em 1.5em;
+              transform: translatez(0);
+          }
+      }
+  }
+
+  &:hover .navbar-dropdown {
+      transform: scale(1, 1);
+      &>div {
+          opacity: 1;
+          transition: opacity .14s .14s ease-in-out;
+      }
+  }
+}
+
+li {
+  font-family: 'Lora', serif;
+}
+.is-smallcaps {
+    font-variant: small-caps;
+}
+// .ubi-img-container {
+//     max-height: 300px;
+//     margin: auto;
+//     padding: auto;
+// }
+figure.ubi-image-leadstory {
+    margin: 0;
+    padding: 0;
+    // max-height: 300px;
+    img {
+        margin: auto;
+        // max-width: 300px;
+        // max-height: 300px;
+    }
+}
+
+
+
+// Fonts last?
+@import url('https://fonts.googleapis.com/css?family=Istok+Web|Lora');
+
+// Define defaults for each variable.
+
+// $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// $base-font-size:   16px !default;
+// $base-font-weight: 400 !default;
+// $small-font-size:  $base-font-size * 0.875 !default;
+// $base-line-height: 1.5 !default;
+
+// $spacing-unit:     30px !default;
+
+// $text-color:       #111 !default;
+// $background-color: #fdfdfd !default;
+// $brand-color:      #2a7ae2 !default;
+
+// $grey-color:       #828282 !default;
+// $grey-color-light: lighten($grey-color, 40%) !default;
+// $grey-color-dark:  darken($grey-color, 25%) !default;
+
+// // Width of the content area
+// $content-width:    800px !default;
+
+// $on-palm:          600px !default;
+// $on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+// @mixin media-query($device) {
+//   @media screen and (max-width: $device) {
+//     @content;
+//   }
+// }
+
+// @mixin relative-font-size($ratio) {
+//   font-size: $base-font-size * $ratio;
+// }
+
+// Import partials.
+// @import
+//   "minima/base",
+//   "minima/layout",
+//   "minima/syntax-highlighting"
+// ;

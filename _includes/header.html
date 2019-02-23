@@ -1,0 +1,74 @@
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{site.baseurl}}/">
+      <img src="{{site.baseurl}}/assets/img/ubizo-white.png"
+        alt="Ubizo Events and Tours: Our culture, our history, your experience" style="max-height: 5rem">
+      <!-- Ubizo Events and Tours -->
+    </a>
+
+    <!-- TODO: Need to add some JS to toggle the burger -->
+    <div class="navbar-burger burger ubi-burger" data-target="navMenuExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navMenuExample" class="navbar-menu ubi-menu">
+    <div class="navbar-end">
+      <a class="navbar-item " href="{{site.baseurl}}/">
+        Home
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">
+          Tours
+        </a>
+        <div class="navbar-dropdown ub-dropdown">
+
+          {% comment %}
+          To update the activites, see the _config.yml file
+          {% endcomment %}
+          {% for link in site.activities %}
+          <a class="navbar-item" href="{{site.baseurl}}{{link.url}}">
+            {{link.text}}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">
+          About
+        </a>
+        <div class="navbar-dropdown ub-dropdown">
+          {% comment %}
+          To update the about, see the _config.yml file
+          {% endcomment %}
+          {% for link in site.about %}
+          <a class="navbar-item" href="{{site.baseurl}}{{link.url}}">
+            {{link.text}}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <a class="navbar-item " href="https://www.facebook.com/Ubizoeventsandtours" target="_blank">
+        News &amp; Events
+      </a>
+      <!-- <a class="navbar-item " href="{{site.baseurl}}/get-involved">
+        Get Involved
+      </a> -->
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="button ub-pill" href="{{site.baseurl}}/contact-us">
+              <!-- <span class="icon">
+                <i class="fa fa-download"></i>
+              </span> -->
+              <span>Book Now</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

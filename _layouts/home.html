@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+
+<!--
+
+convert crew.jpg -resize 770 crew-770.jpg;
+convert crew.jpg -resize 1000 crew-1000.jpg;
+convert crew.jpg -resize 1500 crew-1500.jpg;
+convert crew.jpg -resize 2500 crew-2500.jpg;
+
+-->
+
+{% include hero.html %}
+
+<section class="section">
+  <div class="container content ub-content ub-top-content">
+    <div class="columns">
+      <div class="column"></div>
+      <div class="column is-two-thirds">
+        <h1 class="title has-text-centered">{{page.leadtext}}</h1>
+        {{content}}
+      </div>
+      <div class="column"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container content ub-content">
+    <div class="columns">
+      {% for post in site.leadstories %}
+      <!-- link to each post in index.html -->
+      {% comment %} <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a> {% endcomment %}
+      <div class="column">
+        <figure class="image is-16by9 ubi-image-leadstory">
+          <img src="{{site.baseurl}}/assets/img/{{post.img}}" alt="{{post.title}}">
+          {% comment %} <img src="http://bulma.io/images/placeholders/128x128.png"> {% endcomment %}
+        </figure>
+
+        {% comment %} <figure class="image is-square">
+          <img src="{{post.img}}" alt="tmp">
+          <!-- 
+          tablet only:
+          <img src="http://via.placeholder.com/800x800" alt="tmp"> 
+        -->
+        </figure> {% endcomment %}
+        <h1 class="title has-text-centered">{{post.title}}</h1>
+        {% if post.tag %}
+        <p class="has-text-centered">
+          <a href="{{post.href}}" class="tag is-primary is-normal">{{post.tag}}</a>
+        </p>
+        {% endif %}
+
+        {{post.content}}
+        <p class="has-text-centered"><a href="{{post.href}}">{{post.linktitle}}</a></p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <!-- Spacer  -->
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns content">
+        <div class="column has-text-centered is-capitalized is-smallcaps">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LMiE3rfG4BI" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="column has-text-centered is-capitalized is-smallcaps">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Vnv_TVjG2TA" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <!-- Spacer  -->
+</section>
+
+<section class="hero is-white is-medium">
+  <div class="container">
+    <div class="columns content">
+      <div class="column has-text-centered is-vcentered is-capitalized is-smallcaps">
+        <figure class="image is-128x128">
+          <img src="{{site.baseurl}}/assets/img/cct.jpg" alt="Member of Cape Town Tourism">
+        </figure>
+      </div>
+      <div class="column has-text-centered is-vcentered is-capitalized is-smallcaps">
+        <figure class="image is-128x128">
+          <img src="{{site.baseurl}}/assets/img/SAACI.png" alt="">
+        </figure>
+      </div>
+      <div class="column has-text-centered is-vcentered is-capitalized is-smallcaps">
+        <figure class="image is-128x128">
+          <img src="{{site.baseurl}}/assets/img/SATSA_Bonded.JPG"
+            alt="South Africa Tourism Services Association Bonded">
+        </figure>
+      </div>
+      <div class="column has-text-centered is-vcentered is-capitalized is-smallcaps">
+        <figure class="image is-128x128">
+          <img src="{{site.baseurl}}/assets/img/saytc.png" alt="South African Youth Travel Confederation">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
