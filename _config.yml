@@ -14,14 +14,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Ubizo Events & Tours
-email: your-email@example.com
+email: info@ubizo-sa.co.za
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+   Ubizo Events & Tours offers the best Cape Town tourism experience. Come, walk in our shoes.
+#  Write an awesome description for your new site here. You can edit this
+#  line in _config.yml. It will appear in your document head meta (for
+#  #Google search results) and in your feed.xml site description.
 # baseurl: "/ubizo-test-website" # the subpath of your site, e.g. /blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://bderenzi.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ubizo-sa.co.za/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: notwitter
 github_username:  jekyll
 
