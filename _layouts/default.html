@@ -5,6 +5,13 @@
 
   <body>
 
+    <aside class="notification is-warning has-text-centered ub-contact-notice" aria-label="Email outage contact information">
+      <div class="container">
+        <strong>Our email is currently unavailable.</strong>
+        For enquiries and bookings, <a href="https://wa.me/{{ site.whatsapp_number }}">WhatsApp Sabu on {{ site.whatsapp_display }}</a>.
+      </div>
+    </aside>
+
     {% comment %} {% include header.html %} {% endcomment %}
 
         {{ content }}

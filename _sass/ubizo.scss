@@ -34,6 +34,11 @@ $project-spacing: 3em;
 // 4. Import the rest of Bulma
 @import "bulma";
 
+.notification.ub-contact-notice {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
 .navbar {
   font-family: 'Istok Web', sans-serif;
   letter-spacing: 2px;

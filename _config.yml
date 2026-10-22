@@ -15,6 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Ubizo Events & Tours
 email: info@ubizo-sa.co.za
+whatsapp_number: "27837307942"
+whatsapp_display: "+27 83 730 7942"
 description: > # this means to ignore newlines until "baseurl:"
    Ubizo Events & Tours offers the best Cape Town tourism experience. Come, walk in our shoes.
 #  Write an awesome description for your new site here. You can edit this

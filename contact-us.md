@@ -29,10 +29,12 @@ Vlaeberg
 General Inquiries  
 [info@ubizo-sa.co.za](mailto:info@ubizo-sa.co.za)  
 
+Email is currently unavailable. Please use WhatsApp below for enquiries and bookings.
+
 {% include tile_end_start.html %}
 
 #### WHATSAPP
 
-+27 83 471 2835
+Contact Sabu on [{{ site.whatsapp_display }}](https://wa.me/{{ site.whatsapp_number }}).
 
 {% include tile_end.html %}
